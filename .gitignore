@@ -1,0 +1,6 @@
+.cache/
+dist/
+fnny.egg-info/
+*.swp
+*.pyc
+*.pyo
