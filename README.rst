@@ -1,6 +1,9 @@
 very, very fnny
 ---------------
 
+.. image:: https://travis-ci.org/cpdean/fnny.svg?branch=master
+    :target: https://travis-ci.org/cpdean/fnny
+
 library with some helper functions that make more functions for you.
 
 check it out
