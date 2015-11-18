@@ -30,6 +30,13 @@ make a plucker with pluck::
     assert expected == actual
 
 
+pluck is a good utility function for sorting on stuff::
+
+    expected = sorted(guys, key=lambda x: x.a)
+    actual = sorted(guys, key=p.a)
+    assert expected == actual
+
+
 call a method with method::
 
     from fnny import method as m
