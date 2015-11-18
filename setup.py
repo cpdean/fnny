@@ -15,6 +15,7 @@ setup(
     version=VERSION,
     description="Hot function generators",
     long_description=open(readme).read(),
+    url='https://github.com/cpdean/fnny',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Console',
