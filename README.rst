@@ -6,6 +6,17 @@ very, very fnny
 
 library with some helper functions that make more functions for you.
 
+Installing
+==========
+
+::
+
+    pip install fnny
+
+
+Usage
+=====
+
 check it out
 
 make a plucker with pluck::
