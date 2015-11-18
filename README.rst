@@ -11,12 +11,15 @@ make a plucker with pluck::
     from collections import namedtuple
     G = namedtuple("G", ["a"])
     guys = [G(i) for i in range(10)]
-    assert sum(map(lambda x: x.a, guys)) == sum(map(p.a, guys))
+    expected = sum(map(lambda x: x.a, guys))
+    actual = sum(map(p.a, guys))
+    assert expected == actual
 
 
 call a method with method::
 
     from fnny import method as m
+    from test.test_it import _Argless()
     no_args = [_Argless() for a in range(10)]
     expected = list(map(lambda x: x.wow(), no_args))
     actual = list(map(m.wow, no_args))
@@ -25,6 +28,7 @@ call a method with method::
 use a partially applied method with partial::
     
     from fnny import partial as pa
+    from test.test_it import _OneArg()
     has_args = [_OneArg() for a in range(10)]
     expected = list(map(lambda x: x.add(1), has_args))
     actual = list(map(pa.add(1), has_args))
@@ -33,6 +37,7 @@ use a partially applied method with partial::
 
 partial even supports kwargs::
 
+    from test.test_it import _OneKwarg()
     has_args = [_OneKwarg() for a in range(10)]
     expected = list(map(lambda x: x.derp(something="heyy"), has_args))
     actual = list(map(pa.derp(something="heyy"), has_args))
